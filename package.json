@@ -1,5 +1,5 @@
 {
-  "name": "react-native-numeric-input",
+  "name": "react-native-number-picker",
   "version": "1.9.1",
   "description": "a stylish numeric input for react native",
   "main": "index.js",
@@ -24,13 +24,13 @@
     "name": "omri himelbrand",
     "email": "himelbrand@gmail.com"
   },
-  "homepage": "https://github.com/himelbrand/react-native-numeric-input",
+  "homepage": "https://github.com/himelbrand/react-native-number-picker",
   "bugs": {
-    "url": "https://github.com/himelbrand/react-native-numeric-input/issues"
+    "url": "https://github.com/himelbrand/react-native-number-picker/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/himelbrand/react-native-numeric-input.git"
+    "url": "git://github.com/himelbrand/react-native-number-picker.git"
   },
   "license": "MIT",
   "dependencies": {
