@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View, TextInput, StyleSheet, Text } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/Feather'
 import Button from '../Button'
-import {ViewPropTypes} from 'deprecated-react-native-prop-types'; 
+import {propTypes} from 'prop-types'; 
 import { create, PREDEF_RES } from 'react-native-pixel-perfect'
 
 let calcSize = create(PREDEF_RES.iphone7.px)
@@ -221,23 +221,23 @@ export default class NumericInput extends Component {
                     <TextInput {...this.props.extraTextInputProps} editable={editable} returnKeyType='done' underlineColorAndroid='rgba(0,0,0,0)' keyboardType='numeric' value={this.state.stringValue} onChangeText={this.onChange} style={inputStyle} ref={ref => this.ref = ref} onBlur={this.onBlur} onFocus={this.onFocus} />
                     <View style={upDownStyle}>
                         <Button onPress={this.inc} style={{ flex: 1, width: '100%', alignItems: 'center' }}>
-                            <Icon name='ios-arrow-up' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxIncIconStyle : {}, minReached ? this.props.reachMinIncIconStyle : {}]} />
+                            <Icon name='plus' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxIncIconStyle : {}, minReached ? this.props.reachMinIncIconStyle : {}]} />
                         </Button>
                         <Button onPress={this.dec} style={{ flex: 1, width: '100%', alignItems: 'center' }}>
-                            <Icon name='ios-arrow-down' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxDecIconStyle : {}, minReached ? this.props.reachMinDecIconStyle : {}]} />
+                            <Icon name='minus' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxDecIconStyle : {}, minReached ? this.props.reachMinDecIconStyle : {}]} />
                         </Button>
                     </View>
                 </View>)
         else return (
             <View style={inputContainerStyle}>
                 <Button onPress={this.dec} style={leftButtonStyle}>
-                    <Icon name='md-remove' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxDecIconStyle : {}, minReached ? this.props.reachMinDecIconStyle : {}]} />
+                    <Icon name='minus' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxDecIconStyle : {}, minReached ? this.props.reachMinDecIconStyle : {}]} />
                 </Button>
                 <View style={[inputWraperStyle]}>
                     <TextInput {...this.props.extraTextInputProps} editable={editable} returnKeyType='done' underlineColorAndroid='rgba(0,0,0,0)' keyboardType='numeric' value={this.state.stringValue} onChangeText={this.onChange} style={inputStyle} ref={ref => this.ref = ref} onBlur={this.onBlur} onFocus={this.onFocus} />
                 </View>
                 <Button onPress={this.inc} style={rightButtonStyle}>
-                    <Icon name='md-add' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxIncIconStyle : {}, minReached ? this.props.reachMinIncIconStyle : {}]} />
+                    <Icon name='plus' size={fontSize} style={[...iconStyle, maxReached ? this.props.reachMaxIncIconStyle : {}, minReached ? this.props.reachMinIncIconStyle : {}]} />
                 </Button>
             </View>)
 
@@ -282,35 +282,35 @@ const style = StyleSheet.create({
         paddingRight: calcSize(15)
     }
 })
-NumericInput.ViewPropTypes = {
-    iconSize: ViewPropTypes.number,
-    borderColor: ViewPropTypes.string,
-    iconStyle: ViewPropTypes.any,
-    totalWidth: ViewPropTypes.number,
-    totalHeight: ViewPropTypes.number,
-    sepratorWidth: ViewPropTypes.number,
-    type: ViewPropTypes.oneOf(['up-down', 'plus-minus']),
-    valueType: ViewPropTypes.oneOf(['real', 'integer']),
-    rounded: ViewPropTypes.any,
-    textColor: ViewPropTypes.string,
-    containerStyle: ViewPropTypes.any,
-    inputStyle: ViewPropTypes.any,
-    initValue: ViewPropTypes.number,
-    onChange: ViewPropTypes.func.isRequired,
-    onLimitReached: ViewPropTypes.func,
-    value: ViewPropTypes.number,
-    minValue: ViewPropTypes.number,
-    maxValue: ViewPropTypes.number,
-    step: ViewPropTypes.number,
-    upDownButtonsBackgroundColor: ViewPropTypes.string,
-    rightButtonBackgroundColor: ViewPropTypes.string,
-    leftButtonBackgroundColor: ViewPropTypes.string,
-    editable: ViewPropTypes.bool,
-    reachMaxIncIconStyle: ViewPropTypes.any,
-    reachMaxDecIconStyle: ViewPropTypes.any,
-    reachMinIncIconStyle: ViewPropTypes.any,
-    reachMinDecIconStyle: ViewPropTypes.any,
-    extraTextInputProps: ViewPropTypes.any
+NumericInput.propTypes = {
+    iconSize: propTypes.number,
+    borderColor: propTypes.string,
+    iconStyle: propTypes.any,
+    totalWidth: propTypes.number,
+    totalHeight: propTypes.number,
+    sepratorWidth: propTypes.number,
+    type: propTypes.oneOf(['up-down', 'plus-minus']),
+    valueType: propTypes.oneOf(['real', 'integer']),
+    rounded: propTypes.any,
+    textColor: propTypes.string,
+    containerStyle: propTypes.any,
+    inputStyle: propTypes.any,
+    initValue: propTypes.number,
+    onChange: propTypes.func.isRequired,
+    onLimitReached: propTypes.func,
+    value: propTypes.number,
+    minValue: propTypes.number,
+    maxValue: propTypes.number,
+    step: propTypes.number,
+    upDownButtonsBackgroundColor: propTypes.string,
+    rightButtonBackgroundColor: propTypes.string,
+    leftButtonBackgroundColor: propTypes.string,
+    editable: propTypes.bool,
+    reachMaxIncIconStyle: propTypes.any,
+    reachMaxDecIconStyle: propTypes.any,
+    reachMinIncIconStyle: propTypes.any,
+    reachMinDecIconStyle: propTypes.any,
+    extraTextInputProps: propTypes.any
 }
 NumericInput.defaultProps = {
     iconSize: calcSize(30),
