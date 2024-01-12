@@ -20,14 +20,14 @@
     "input",
     "numeric"
   ],
-  "author": "omri himelbrand <himelbrand@gmail.com>",
-  "homepage": "https://github.com/himelbrand/react-native-number-picker",
+  "author": "orj: omri himelbrand, updated by Yetki <yetki@bakadur.com>",
+  "homepage": "https://github.com/yetki/react-native-number-picker",
   "bugs": {
-    "url": "https://github.com/himelbrand/react-native-number-picker/issues"
+    "url": "https://github.com/yetki/react-native-number-picker/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/himelbrand/react-native-number-picker.git"
+    "url": "git://github.com/yetki/react-native-number-picker.git"
   },
   "license": "MIT",
   "dependencies": {
