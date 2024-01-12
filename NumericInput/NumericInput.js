@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, TextInput, StyleSheet, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/Feather'
 import Button from '../Button'
-import {propTypes} from 'prop-types'; 
+import { PropTypes  } from 'prop-types';
 import { create, PREDEF_RES } from 'react-native-pixel-perfect'
 
 let calcSize = create(PREDEF_RES.iphone7.px)
@@ -21,7 +21,7 @@ export default class NumericInput extends Component {
 
     // this.props refers to the new props
     componentDidUpdate() {
-        const initSent = !(this.props.initValue !== 0 && !this.props.initValue); 
+        const initSent = !(this.props.initValue !== 0 && !this.props.initValue);
 
         // compare the new value (props.initValue) with the existing/old one (this.state.value)
         if (this.props.initValue !== this.state.value && initSent) {
@@ -32,7 +32,7 @@ export default class NumericInput extends Component {
             });
         }
     }
-    
+
     updateBaseResolution = (width, height) => {
         calcSize = create({ width, height })
     }
@@ -283,34 +283,34 @@ const style = StyleSheet.create({
     }
 })
 NumericInput.propTypes = {
-    iconSize: propTypes.number,
-    borderColor: propTypes.string,
-    iconStyle: propTypes.any,
-    totalWidth: propTypes.number,
-    totalHeight: propTypes.number,
-    sepratorWidth: propTypes.number,
-    type: propTypes.oneOf(['up-down', 'plus-minus']),
-    valueType: propTypes.oneOf(['real', 'integer']),
-    rounded: propTypes.any,
-    textColor: propTypes.string,
-    containerStyle: propTypes.any,
-    inputStyle: propTypes.any,
-    initValue: propTypes.number,
-    onChange: propTypes.func.isRequired,
-    onLimitReached: propTypes.func,
-    value: propTypes.number,
-    minValue: propTypes.number,
-    maxValue: propTypes.number,
-    step: propTypes.number,
-    upDownButtonsBackgroundColor: propTypes.string,
-    rightButtonBackgroundColor: propTypes.string,
-    leftButtonBackgroundColor: propTypes.string,
-    editable: propTypes.bool,
-    reachMaxIncIconStyle: propTypes.any,
-    reachMaxDecIconStyle: propTypes.any,
-    reachMinIncIconStyle: propTypes.any,
-    reachMinDecIconStyle: propTypes.any,
-    extraTextInputProps: propTypes.any
+    iconSize: PropTypes.number,
+    borderColor: PropTypes.string,
+    iconStyle: PropTypes.any,
+    totalWidth: PropTypes.number,
+    totalHeight: PropTypes.number,
+    sepratorWidth: PropTypes.number,
+    type: PropTypes.oneOf(['up-down', 'plus-minus']),
+    valueType: PropTypes.oneOf(['real', 'integer']),
+    rounded: PropTypes.any,
+    textColor: PropTypes.string,
+    containerStyle: PropTypes.any,
+    inputStyle: PropTypes.any,
+    initValue: PropTypes.number,
+    onChange: PropTypes.func.isRequired,
+    onLimitReached: PropTypes.func,
+    value: PropTypes.number,
+    minValue: PropTypes.number,
+    maxValue: PropTypes.number,
+    step: PropTypes.number,
+    upDownButtonsBackgroundColor: PropTypes.string,
+    rightButtonBackgroundColor: PropTypes.string,
+    leftButtonBackgroundColor: PropTypes.string,
+    editable: PropTypes.bool,
+    reachMaxIncIconStyle: PropTypes.any,
+    reachMaxDecIconStyle: PropTypes.any,
+    reachMinIncIconStyle: PropTypes.any,
+    reachMinDecIconStyle: PropTypes.any,
+    extraTextInputProps: PropTypes.any
 }
 NumericInput.defaultProps = {
     iconSize: calcSize(30),
