@@ -1,7 +1,7 @@
 # react-native-number-picker
 a cross platform stylish numeric input for react native
 
-<h3 align="center"><b>Visual Demo</b></h3>
+<h3 align="center"><b>Visuals Demo</b></h3>
 <p align="center">
 <img src="https://media.giphy.com/media/4To90hOE71mUTgdBVZ/giphy.gif"/>
 </p>
